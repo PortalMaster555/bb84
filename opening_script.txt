@@ -1,0 +1,62 @@
+`
+Hello, and welcome to this introduction to the BB84 algorithm.
+This algorithm is used to distribute crytographic keys in a 100% secure manner.
+It is named for its inventors, Charles Bennett and Gilles Brassard, who designed
+it in 1984.
+~
+This is Alice:   A
+Alice wants to send a message to Bob:    B
+However, there is an eavesdropper; let's call her Eve:   E
+~
+So the setup looks something like this:
+    Classical Channel:
+A------------+------------B
+             |             
+             E             
+~
+Using a protocol such as One-Time Pad, pre-shared keys can be used to send
+information that Eve cannot decode.
+A---jqhyerfaiupxsomkgcn---B
+             |             
+             E             
+~
+Without the key, the information can be turned into ANYTHING of the same length,
+so Eve is very unlikely to ever figure out the intended message.
+A----------+----------B [Today we go to Bonn] :)
+           |           
+           E 
+ [One cheese sandwich] :(
+~
+It is impossible for Eve to prove (without other information) that what she
+decodes is really the message. She is just guessing!
+~
+`
+The trouble is, Eve could have listened in when Alice and Bob shared their keys.
+A--B ---> E
+So what we really need is a method to distribute keys 100% securely.
+~
+Eve has two advantages:
+1.) Eve can copy any part of the data stream and store it for later decoding.
+2.) Eve can listen to the data stream without informing Alice or Bob.
+        (She leaves no trace.)
+~
+Now suppose Alice and Bob use Quantum Mechanics to distribute their keys.
+      Quantum Channel:
+A============+============B
+             |             
+             E             
+~
+Now Eve loses her two advantages:
+1.) The No-Cloning Theorem says Eve cannot copy the information.
+2.) Eve's interaction with the data stream will cause it to change measurably.
+~
+So, we can come up with a method to send information, then check if any
+tampering has occurred! This can be used to select randomly-generated keys
+for future use by Alice and Bob.
+~
+One such algorithm is the BB84 Quantum Key Distribution (QKD) algorithm,
+which will be covered in another video.
+
+[END]
+
+© 2024 Devin Springborn. All rights reserved.
